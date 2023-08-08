@@ -1,0 +1,26 @@
+File descriptions
+
+-sketch.js
+This is where you do your first experiment! A simple drawing of ABC using a single drawLetter() function. This file is only connected to sketch.html
+
+-draw_letters.js
+This is where you will do most of your coding for this project. This is where you will use the data from letters.js to inform how your letters will look.
+
+-letters.js
+This is the file that will hold the data that draws your letters. This is a javascript file that just holds information in a way that is similar to .json files. This file does not have any functions that you can call, it only holds information. 
+
+-editor.js
+OPTIONAL 
+We will go over this in class. If you set up this file correctly you can use it to help generate data for your letters.js file. 
+
+- alphabet.js
+You should not need to touch it. 
+
+- exhibition.js
+You should not need to touch it. 
+
+- interaction.js 
+You should not need to touch it. 
+
+-html's
+Generally, the html pages will display their corresponding .js file. Their purpose within the brief will be discussed in class
