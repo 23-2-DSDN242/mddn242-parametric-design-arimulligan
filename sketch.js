@@ -13,21 +13,21 @@ const canvasHeight = 500;
  */
 
 const letterA = {
-  "size": 80,
-  "offsetx": 0,
-  "offsety": 35
+  "size": 100,
+  "offsetx": -100,
+  "offsety": 0
 }
 
 const letterB = {
-  "size": 150,
-  "offsetx": 0,
-  "offsety": -145
+  "size": 70,
+  "offsetx": -50,
+  "offsety": 50
 }
 
 const letterC = {
-  "size": 100,
-  "offsetx": 30,
-  "offsety": 0
+  "size": 50,
+  "offsetx": 0,
+  "offsety": 150
 }
 
 const backgroundColor  = "#caf0f8";
@@ -42,8 +42,8 @@ function setup () {
   main_canvas.parent('canvasContainer');
 
   // color/stroke setup
-  stroke(strokeColor);
-  strokeWeight(4);
+  stroke(darkBlue);
+  strokeWeight(0);
 
   // with no animation, redrawing the screen is not necessary
   noLoop();
@@ -58,22 +58,33 @@ function draw () {
   let center_y = canvasHeight / 2;
 
   // draw the letters A, B, C from saved data
-  drawLetter(center_x - 250, center_y, letterA);
-  drawLetter(center_x      , center_y, letterB);
-  drawLetter(center_x + 250, center_y, letterC);
+  drawLetter(center_x - 250, center_y, letterA, 0, 1);
+  drawLetter(center_x      , center_y, letterB, 0, 2);
+  drawLetter(center_x + 250, center_y, letterC, 300, 1);
 }
 
-function drawLetter(posx, posy, letterData) {
+function drawLetter(posx, posy, letterData, circleOffset, count) {
   // determine parameters for second circle
   let size2 = letterData["size"];
   let pos2x = posx + letterData["offsetx"];
   let pos2y = posy + letterData["offsety"];
 
-  // draw two circles
+  // draw triangles 
+  translate(circleOffset*1.2, circleOffset*3.5);
+  rotate(circleOffset);
   fill(darkBlue);
-  ellipse(posx, posy, 150, 150);
-  fill(lightBlue);
-  ellipse(pos2x, pos2y, size2, size2);
+  for (let i=1; i<=5; i++){
+    if (i % 2 ==0 ){fill(backgroundColor);}
+    else{fill(darkBlue);}
+    triangle(30+pos2x-size2, 75+pos2y, 58+pos2x, 20+pos2y-size2, 86+pos2x+size2, 75+pos2y);
+    size2 -= 20;
+    let posyyy = pos2y;
+    let posxxx = pos2x;
+    for (let i=1; i<=count; i++){
+      triangle(30+posxxx-size2, 75+posyyy, 58+posxxx, 20+posyyy-size2, 86+posxxx+size2, 75+posyyy);
+      posyyy -= i * 100;
+    }
+  }
 }
 
 function keyTyped() {
