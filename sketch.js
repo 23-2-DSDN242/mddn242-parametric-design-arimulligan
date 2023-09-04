@@ -38,7 +38,6 @@ const letterC = {
 
 const backgroundColor  = "#caf0f8";
 const strokeColor      = "#03045e";
-
 const darkBlue  = "#white";
 
 function setup () {
