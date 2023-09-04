@@ -29,12 +29,12 @@ function polygon(x, y, size, sides = 3, radius = 0, rot=0) {
   // Radius angle
   let aradius = sides > 2 ? PI - apoly : PI;
   // distance between vertex and radius center
-  let r = 2 * radius * sin(HALF_PI - 0.5 * apoly); push()
+  let r = 2 * radius * sin(HALF_PI - 0.5 * apoly); 
+  push();
   // debug log
   // console.log('Polygon : sides '+sides+', apoly:'+degrees(apoly).toPrecision(4)+', aradius:'+degrees(aradius).toPrecision(4)+',distance from vertex for radius:'+rproj.toPrecision(4))
   let res = 5;
   // Start drawing
-  push()
   translate(x, y)
   rotate(rot)
   beginShape()
@@ -61,7 +61,7 @@ function polygon(x, y, size, sides = 3, radius = 0, rot=0) {
       }
   }
  endShape(CLOSE)
- pop()
+ pop();
 }
 
 /*
