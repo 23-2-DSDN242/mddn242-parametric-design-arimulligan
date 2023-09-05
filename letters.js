@@ -13,17 +13,17 @@ const alphabet = {
     "triangleRot": 0
   },
   "A": {
-    "triangleX": 40,
-    "triangleY": 0,
-    "rect1X": 100,
-    "rect1Y": 200,
-    "rect2X": 200,
-    "rect2Y": 100,
-    "circleX": 50,
-    "circleY": 50,
-    "rect1Rot": 10,
-    "rect2Rot": -10,
-    "triangleRot": 0
+    "triangleX": 52,
+    "triangleY": 70,
+    "rect1X": 22,
+    "rect1Y": 148,
+    "rect2X": 80,
+    "rect2Y": 148,
+    "circleX": 52,
+    "circleY": 66,
+    "rect1Rot": 75.6,
+    "rect2Rot": 72,
+    "triangleRot": 86.3999999999
   },
   "B": {
     "triangleX": 40,
