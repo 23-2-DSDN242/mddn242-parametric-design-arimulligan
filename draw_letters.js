@@ -57,9 +57,19 @@ function drawLetter(letterData) {
 
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
-  new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
-  new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
-  new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  new_letter["triangleX"] = map(percent, 0, 100, oldObj["triangleX"], newObj["triangleX"]);
+  new_letter["triangleY"] = map(percent, 0, 100, oldObj["triangleY"], newObj["triangleY"]);
+  new_letter["rect1X"] = map(percent, 0, 100, oldObj["rect1X"], newObj["rect1X"]);
+  new_letter["rect1Y"] = map(percent, 0, 100, oldObj["rect1Y"], newObj["rect1Y"]);
+  new_letter["rect2X"] = map(percent, 0, 100, oldObj["rect2X"], newObj["rect2X"]);
+  new_letter["rect2Y"] = map(percent, 0, 100, oldObj["rect2Y"], newObj["rect2Y"]);
+  new_letter["snakeX"] = map(percent, 0, 100, oldObj["snakeX"], newObj["snakeX"]);
+  new_letter["snakeY"] = map(percent, 0, 100, oldObj["snakeY"], newObj["snakeY"]);
+  new_letter["snakeLength"] = map(percent, 0, 100, oldObj["snakeLength"], newObj["snakeLength"]);
+  new_letter["snakeRot"] = map(percent, 0, 100, oldObj["snakeRot"], newObj["snakeRot"]);
+  new_letter["rect1Rot"] = map(percent, 0, 100, oldObj["rect1Rot"], newObj["rect1Rot"]);
+  new_letter["rect2Rot"] = map(percent, 0, 100, oldObj["rect2Rot"], newObj["rect2Rot"]);
+  new_letter["triangleRot"] = map(percent, 0, 100, oldObj["triangleRot"], newObj["triangleRot"]);
   return new_letter;
 }
 
