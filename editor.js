@@ -11,11 +11,13 @@ const sliderInfo = [
   ["rect1Y", 0, 200],
   ["rect2X", 0, 200],
   ["rect2Y", 0, 200],
-  ["circleX", 0, 200],
-  ["circleY", 0, 200],
+  ["snakeX", -30, 200],
+  ["snakeY", 0, 200],
+  ["snakeLength", 0, 20],
+  ["snakeRot", 0, 360],
   ["rect1Rot", 0, 360],
   ["rect2Rot", 0, 360],
-  ["triangleRot", 205.2, 360]
+  ["triangleRot", 0, 360]
 ];
 
 // PROBABLY DON'T NEED TO EDIT ANYTHING ELSE. STOP HERE.

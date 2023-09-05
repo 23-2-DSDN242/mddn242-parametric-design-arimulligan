@@ -1,13 +1,15 @@
 const alphabet = {
   "default": {
-    "triangleX": 40,
+    "triangleX": 0,
     "triangleY": 0,
     "rect1X": 0,
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    "snakeY": 0,
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -19,8 +21,10 @@ const alphabet = {
     "rect1Y": 148,
     "rect2X": 90,
     "rect2Y": 148,
-    "circleX": 52,
-    "circleY": 56,
+    "snakeX": 32,
+    "snakeY": 106,
+    "snakeLength": 3,
+    "snakeRot": 0,
     "rect1Rot": 75.6,
     "rect2Rot": 72,
     "triangleRot": 86.3999999999
@@ -32,8 +36,10 @@ const alphabet = {
     "rect1Y": 150,
     "rect2X": 58,
     "rect2Y": 166,
-    "circleX": 65,
-    "circleY": 110,
+    "snakeX": 35,
+    "snakeY": 120,
+    "snakeLength": 3,
+    "snakeRot": 120,
     "rect1Rot": 147.6,
     "rect2Rot": 180,
     "triangleRot": 0
@@ -45,63 +51,73 @@ const alphabet = {
     "rect1Y": 33,
     "rect2X": 73.42,
     "rect2Y": 161,
-    "circleX": 60,
-    "circleY": 95,
+    "snakeX": 0,
+    "snakeY": 135,
+    "snakeLength": 5,
+    "snakeRot": 277.2,
     "rect1Rot": 51.104,
     "rect2Rot": 124.848,
     "triangleRot": 237.708
   },
   "D": {
-    "triangleX": 56,
+    "triangleX": 66,
     "triangleY": 95,
-    "rect1X": 26,
+    "rect1X": 36,
     "rect1Y": 33,
-    "rect2X": 26,
+    "rect2X": 36,
     "rect2Y": 161,
-    "circleX": 0,
-    "circleY": 95,
+    "snakeX": -15,
+    "snakeY": 40,
+    "snakeLength": 6,
+    "snakeRot": 234,
     "rect1Rot": 190.8,
     "rect2Rot": 104.4,
-    "triangleRot": 205.2
+    "triangleRot": 0
   },
   "E": {
-    "triangleX": 40,
-    "triangleY": 0,
-    "rect1X": 0,
-    "rect1Y": 0,
-    "rect2X": 0,
-    "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
-    "rect1Rot": 0,
-    "rect2Rot": 0,
+    "triangleX": 36,
+    "triangleY": 100,
+    "rect1X": 50,
+    "rect1Y": 32,
+    "rect2X": 50,
+    "rect2Y": 168,
+    "snakeX": -15,
+    "snakeY": 40,
+    "snakeLength": 6,
+    "snakeRot": 234,
+    "rect1Rot": 86.39999999,
+    "rect2Rot": 259.2,
     "triangleRot": 0
   },
   "F": {
-    "triangleX": 40,
-    "triangleY": 0,
-    "rect1X": 0,
-    "rect1Y": 0,
-    "rect2X": 0,
-    "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
-    "rect1Rot": 0,
-    "rect2Rot": 0,
+    "triangleX": 36,
+    "triangleY": 75,
+    "rect1X": 55,
+    "rect1Y": 30,
+    "rect2X": 25,
+    "rect2Y": 150,
+    "snakeX": 75,
+    "snakeY": 60,
+    "snakeLength": 3,
+    "snakeRot": 172.7999999,
+    "rect1Rot": 86.39999999,
+    "rect2Rot": 172.7999999,
     "triangleRot": 0
   },
   "G": {
-    "triangleX": 40,
-    "triangleY": 0,
-    "rect1X": 0,
-    "rect1Y": 0,
-    "rect2X": 0,
-    "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
-    "rect1Rot": 0,
-    "rect2Rot": 0,
-    "triangleRot": 0
+    "triangleX": 78,
+    "triangleY": 154,
+    "rect1X": 82,
+    "rect1Y": 56,
+    "rect2X": 28,
+    "rect2Y": 54,
+    "snakeX": 59.7,
+    "snakeY": 165,
+    "snakeLength": 4,
+    "snakeRot": 205.2,
+    "rect1Rot": 266.4,
+    "rect2Rot": 252,
+    "triangleRot": 28.8
   },
   "H": {
     "triangleX": 40,
@@ -110,8 +126,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    "snakeY": 0,
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -123,8 +141,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -136,8 +156,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -149,8 +171,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -162,8 +186,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -175,8 +201,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -188,8 +216,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -201,8 +231,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -214,8 +246,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -227,8 +261,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -240,8 +276,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -253,8 +291,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -266,8 +306,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -279,8 +321,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -292,8 +336,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -305,8 +351,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -318,8 +366,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -331,8 +381,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -344,8 +396,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -357,8 +411,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -370,8 +426,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -383,8 +441,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -396,8 +456,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -409,8 +471,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -422,8 +486,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -435,8 +501,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -448,8 +516,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -461,8 +531,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -474,8 +546,10 @@ const alphabet = {
     "rect1Y": 0,
     "rect2X": 0,
     "rect2Y": 0,
-    "circleX": 0,
-    "circleY": 0,
+    "snakeX": 0,
+    
+    "snakeLength": 5,
+    "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0

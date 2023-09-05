@@ -1,6 +1,6 @@
 /* these are optional special variables which will change the system */
 var systemBackgroundColor = "#F2D399";
-var systemLineColor = "#000090";
+var systemLineColor = "#732A24";
 var systemBoxColor = "#00c800";
 
 /* internal constants */
@@ -30,8 +30,10 @@ function drawLetter(letterData) {
   let rect1Y = letterData["rect1Y"];
   let rect2X = letterData["rect2X"];
   let rect2Y = letterData["rect2Y"];
-  let circleX = letterData["circleX"];
-  let circleY = letterData["circleY"];
+  let snakeX = letterData["snakeX"];
+  let snakeY = letterData["snakeY"];
+  let snakeLength = letterData["snakeLength"];
+  let snakeRot = letterData["snakeRot"];
   let rect1Rot = letterData["rect1Rot"];
   let rect2Rot = letterData["rect2Rot"];
   let triangleRot = letterData["triangleRot"];
@@ -41,17 +43,16 @@ function drawLetter(letterData) {
     fill(colorList[i]);
     let addedSize = i * 15;
     // draw triangle 
-    polygon(triangleX, triangleY, 60 - addedSize, 60 - addedSize, 3, 7, triangleRot);
+    polygon(triangleX, triangleY, 50 - addedSize, 50 - addedSize, 3, 7, triangleRot);
     
-    // draw rectangles 
-    polygon(rect1X, rect1Y, 30 - addedSize, 50 - addedSize, 4, 5, rect1Rot);
-    polygon(rect2X, rect2Y, 30 - addedSize, 50 - addedSize, 4, 5, rect2Rot);
+    if (i == 2){break;} // so last colour doesn't show up 
+    // draw rectangles
+    polygon(rect1X, rect1Y, 20 - addedSize, 50 - addedSize, 4, 10, rect1Rot);
+    polygon(rect2X, rect2Y, 20 - addedSize, 50 - addedSize, 4, 10, rect2Rot);
   }
 
-
-  // draw circle
-  fill(brown); // background
-  circle(circleX, circleY, 20);
+  // draw a snake
+  drawSnake(snakeLength, snakeX, snakeY, snakeRot);
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
@@ -71,7 +72,6 @@ var swapWords = [
 /** A primitive function for rounded polygonal shape 
  * Polygon is circumscribed in a circle of radius 'size'
  * Round corners radius is specified.
- * similar to circle(x,y,s) with extra parameters
  * @param x - x center of polygon
  * @param y - y center of polygon
  * @param sizeX - width of polygon (radius of circumscribed circle)
@@ -111,16 +111,66 @@ function polygon(x, y, sizeX, sizeY, sides = 3, radius = 0, rot=0) {
               let px = radius * cos(rotrad);
               let py = radius * sin(rotrad);
               vertex(cx + px, cy + py);
-              // circle(cx + px, cy + py, 0.15*i+2)
           }
-          // circle(cx, cy, 0.15*a+2)
       } else {
           let dx = sizeX * cos(rot);
           let dy = sizeY * sin(rot);
           vertex(dx, dy);
-          // circle(dx,dy, 0.15*a+2);
       }
   }
  endShape(CLOSE);
  pop();
+}
+
+/**
+ * Draws a snake using arc.
+ * @param numArcs Number of arcs / or length of snake
+ * @param startX  x-coord
+ * @param startY y-coord
+ * @author Arianna Mulligan
+ */
+function drawSnake(numArcs, startX, startY, rotation) {
+  let segmentSize = 20; // Size of each segment
+  let spacing = 5; // Spacing between arcs
+  push();
+  translate(startX, startY);
+  rotate(rotation);
+  noFill();
+  stroke(brown);
+  strokeWeight(5);
+  for (let i = 0; i < numArcs; i++) {
+    let x =  (i * (segmentSize + spacing));
+
+    // Determine the arc angles based on whether i is even or odd
+    let startAngle, endAngle, y;
+    if (i % 2 === 0) {
+      y = 0;
+      startAngle = PI + QUARTER_PI;
+      endAngle = -QUARTER_PI;
+    } else {
+      y = -(segmentSize + spacing + 6);
+      startAngle = QUARTER_PI;
+      endAngle = -PI - QUARTER_PI;
+    }
+    
+    // Draw the arc to create a curved appearance
+    arc(x, y, segmentSize * 2, segmentSize * 2, startAngle, endAngle);
+  }
+  // head
+  let xhead = - segmentSize +5;
+  let yhead = - segmentSize +4;
+  fill(brown);
+  ellipse(xhead, yhead, 10, 5);
+  
+  // tongue
+  strokeWeight(2);
+  line(xhead, yhead, xhead -10, yhead);
+  line(xhead -10, yhead, xhead -12, yhead+2);
+  line(xhead -10, yhead, xhead -12, yhead-2);
+  
+  // eyes
+  stroke("#F2D399"); // background
+  circle(xhead, yhead +3, 1);
+  circle(xhead, yhead -3, 1);
+  pop();
 }
