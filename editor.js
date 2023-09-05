@@ -15,7 +15,7 @@ const sliderInfo = [
   ["circleY", 0, 200],
   ["rect1Rot", 0, 360],
   ["rect2Rot", 0, 360],
-  ["triangleRot", 0, 360]
+  ["triangleRot", 205.2, 360]
 ];
 
 // PROBABLY DON'T NEED TO EDIT ANYTHING ELSE. STOP HERE.

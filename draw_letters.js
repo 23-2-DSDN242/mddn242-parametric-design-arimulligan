@@ -1,12 +1,16 @@
 /* these are optional special variables which will change the system */
-var systemBackgroundColor = "#caf0f8";
+var systemBackgroundColor = "#F2D399";
 var systemLineColor = "#000090";
 var systemBoxColor = "#00c800";
 
 /* internal constants */
-const darkBlue  = "#0077b6";
-const lightBlue  = "#90e0ef";
-const strokeColor  = "#03045e";
+const redish  = "#A6360D";
+const hay  = "#D9A74A";
+const yellowish = '#F2C84B';
+const darkBrown = '#732A24';
+const brown  = "#A65B1B";
+
+const colorList = [hay, redish, darkBrown];
 
 /*
  * Draw the letter given the letterData
@@ -17,8 +21,7 @@ const strokeColor  = "#03045e";
  */
 function drawLetter(letterData) {
   // color/stroke setup
-  stroke(strokeColor);
-  strokeWeight(4);
+  noStroke();
 
   // determine parameters for the letter 
   let triangleX = letterData["triangleX"];
@@ -33,16 +36,22 @@ function drawLetter(letterData) {
   let rect2Rot = letterData["rect2Rot"];
   let triangleRot = letterData["triangleRot"];
 
-  // draw triangle 
-  fill(darkBlue);
-  polygon(triangleX, triangleY, 50, 50, 3, 7, triangleRot);
-  
-  // draw rectangles 
-  polygon(rect1X, rect1Y, 15, 40, 4, 5, rect1Rot);
-  polygon(rect2X, rect2Y, 15, 40, 4, 5, rect2Rot);
+  for (let i = 0; i < 3; i++){
+    // change each color 
+    fill(colorList[i]);
+    let addedSize = i * 15;
+    // draw triangle 
+    polygon(triangleX, triangleY, 60 - addedSize, 60 - addedSize, 3, 7, triangleRot);
+    
+    // draw rectangles 
+    polygon(rect1X, rect1Y, 30 - addedSize, 50 - addedSize, 4, 5, rect1Rot);
+    polygon(rect2X, rect2Y, 30 - addedSize, 50 - addedSize, 4, 5, rect2Rot);
+  }
+
 
   // draw circle
-  circle(circleX, circleY, 15);
+  fill(brown); // background
+  circle(circleX, circleY, 20);
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
