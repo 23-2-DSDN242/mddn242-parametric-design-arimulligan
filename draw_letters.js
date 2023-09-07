@@ -21,9 +21,10 @@ const colorList = [hay, redish, darkBrown];
  */
 function drawLetter(letterData) {
   // color/stroke setup
+  angleMode(RADIANS); // this is the problem rip
   noStroke();
 
-  // determine parameters for the letter 
+  // determine parameters for the letter
   let triangleX = letterData["triangleX"];
   let triangleY = letterData["triangleY"];
   let rect1X = letterData["rect1X"];
@@ -39,13 +40,13 @@ function drawLetter(letterData) {
   let triangleRot = letterData["triangleRot"];
 
   for (let i = 0; i < 3; i++){
-    // change each color 
+    // change each color
     fill(colorList[i]);
     let addedSize = i * 15;
-    // draw triangle 
+    // draw triangle
     polygon(triangleX, triangleY, 50 - addedSize, 50 - addedSize, 3, 7, triangleRot);
     
-    if (i == 2){break;} // so last colour doesn't show up 
+    if (i == 2){break;} // so last colour doesn't show up
     // draw rectangles
     polygon(rect1X, rect1Y, 20 - addedSize, 50 - addedSize, 4, 10, rect1Rot);
     polygon(rect2X, rect2Y, 20 - addedSize, 50 - addedSize, 4, 10, rect2Rot);
@@ -65,8 +66,11 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["rect2Y"] = map(percent, 0, 100, oldObj["rect2Y"], newObj["rect2Y"]);
   new_letter["snakeX"] = map(percent, 0, 100, oldObj["snakeX"], newObj["snakeX"]);
   new_letter["snakeY"] = map(percent, 0, 100, oldObj["snakeY"], newObj["snakeY"]);
+
   new_letter["snakeLength"] = map(percent, 0, 100, oldObj["snakeLength"], newObj["snakeLength"]);
+
   new_letter["snakeRot"] = map(percent, 0, 100, oldObj["snakeRot"], newObj["snakeRot"]);
+
   new_letter["rect1Rot"] = map(percent, 0, 100, oldObj["rect1Rot"], newObj["rect1Rot"]);
   new_letter["rect2Rot"] = map(percent, 0, 100, oldObj["rect2Rot"], newObj["rect2Rot"]);
   new_letter["triangleRot"] = map(percent, 0, 100, oldObj["triangleRot"], newObj["triangleRot"]);
@@ -79,7 +83,7 @@ var swapWords = [
   "BAAAAAAA"
 ]
 
-/** A primitive function for rounded polygonal shape 
+/** A primitive function for rounded polygonal shape
  * Polygon is circumscribed in a circle of radius 'size'
  * Round corners radius is specified.
  * @param x - x center of polygon
@@ -101,13 +105,13 @@ function polygon(x, y, sizeX, sizeY, sides = 3, radius = 0, rot=0) {
   // Radius angle
   let aradius = sides > 2 ? PI - apoly : PI;
   // distance between vertex and radius center
-  let r = 2 * radius * sin(HALF_PI - 0.5 * apoly); 
+  let r = 2 * radius * sin(HALF_PI - 0.5 * apoly);
   push();
   
   let res = 10;
   // Start drawing
   translate(x, y);
-  rotate(rot);
+  rotate(radians(rot));
   beginShape();
   for (let a = 0; a < sides; a++) {
       // Rotation for polygon vertex
@@ -128,8 +132,8 @@ function polygon(x, y, sizeX, sizeY, sides = 3, radius = 0, rot=0) {
           vertex(dx, dy);
       }
   }
- endShape(CLOSE);
- pop();
+  endShape(CLOSE);
+  pop();
 }
 
 /**
@@ -144,7 +148,7 @@ function drawSnake(numArcs, startX, startY, rotation) {
   let spacing = 5; // Spacing between arcs
   push();
   translate(startX, startY);
-  rotate(rotation);
+  rotate(radians(rotation));
   noFill();
   stroke(brown);
   strokeWeight(5);

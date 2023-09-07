@@ -1,18 +1,18 @@
 const alphabet = {
   "default": {
-    "triangleX": 40,
-    "triangleY": 100,
-    "rect1X": 70,
-    "rect1Y": 150,
-    "rect2X": 40,
-    "rect2Y": 50,
-    "snakeX": 50,
-    "snakeY": 70,
-    "snakeLength": 3,
-    "snakeRot": 0,
-    "rect1Rot": 0,
-    "rect2Rot": 0,
-    "triangleRot": 0
+    "triangleX": 70,
+    "triangleY": 44,
+    "rect1X": 38,
+    "rect1Y": 34,
+    "rect2X": 52,
+    "rect2Y": 120,
+    "snakeX": 43.6,
+    "snakeY": 162,
+    "snakeLength": 0,
+    "snakeRot": 235,
+    "rect1Rot": 230,
+    "rect2Rot": 205,
+    "triangleRot": 170
   },
   "A": {
     "triangleX": 52,
@@ -25,9 +25,9 @@ const alphabet = {
     "snakeY": 106,
     "snakeLength": 3,
     "snakeRot": 0,
-    "rect1Rot": 75.6,
-    "rect2Rot": 72,
-    "triangleRot": 86.3999999999
+    "rect1Rot": 200,
+    "rect2Rot": 160,
+    "triangleRot": 270
   },
   "B": {
     "triangleX": 42,
@@ -39,9 +39,9 @@ const alphabet = {
     "snakeX": 35,
     "snakeY": 120,
     "snakeLength": 3,
-    "snakeRot": 120,
-    "rect1Rot": 147.6,
-    "rect2Rot": 180,
+    "snakeRot": 35,
+    "rect1Rot": 0,
+    "rect2Rot": 230,
     "triangleRot": 0
   },
   "C": {
@@ -54,10 +54,10 @@ const alphabet = {
     "snakeX": 0,
     "snakeY": 135,
     "snakeLength": 5,
-    "snakeRot": 277.2,
-    "rect1Rot": 51.104,
-    "rect2Rot": 124.848,
-    "triangleRot": 237.708
+    "snakeRot": 40,
+    "rect1Rot": 55,
+    "rect2Rot": 125,
+    "triangleRot": 180
   },
   "D": {
     "triangleX": 66,
@@ -69,9 +69,9 @@ const alphabet = {
     "snakeX": -15,
     "snakeY": 40,
     "snakeLength": 6,
-    "snakeRot": 234,
-    "rect1Rot": 190.8,
-    "rect2Rot": 104.4,
+    "snakeRot": 90,
+    "rect1Rot": 130,
+    "rect2Rot": 230,
     "triangleRot": 0
   },
   "E": {
@@ -84,9 +84,9 @@ const alphabet = {
     "snakeX": -15,
     "snakeY": 40,
     "snakeLength": 6,
-    "snakeRot": 234,
-    "rect1Rot": 86.39999999,
-    "rect2Rot": 259.2,
+    "snakeRot": 90,
+    "rect1Rot": 90,
+    "rect2Rot": 90,
     "triangleRot": 0
   },
   "F": {
@@ -99,9 +99,9 @@ const alphabet = {
     "snakeX": 75,
     "snakeY": 60,
     "snakeLength": 3,
-    "snakeRot": 172.7999999,
-    "rect1Rot": 86.39999999,
-    "rect2Rot": 172.7999999,
+    "snakeRot": 180,
+    "rect1Rot": 90,
+    "rect2Rot": 0,
     "triangleRot": 0
   },
   "G": {
@@ -114,10 +114,10 @@ const alphabet = {
     "snakeX": 59.7,
     "snakeY": 165,
     "snakeLength": 4,
-    "snakeRot": 205.2,
-    "rect1Rot": 266.4,
-    "rect2Rot": 252,
-    "triangleRot": 28.8
+    "snakeRot": 235,
+    "rect1Rot": 145,
+    "rect2Rot": 215,
+    "triangleRot": 90
   },
   "H": {
     "triangleX": 50,
@@ -129,9 +129,9 @@ const alphabet = {
     "snakeX": 85,
     "snakeY": 32,
     "snakeLength": 7,
-    "snakeRot": 259.2,
-    "rect1Rot": 172.8, // might have ot change if doesn't look perfectly straight
-    "rect2Rot": 172.8,
+    "snakeRot": 90,
+    "rect1Rot": 180,
+    "rect2Rot": 180,
     "triangleRot": 0
   },
   "I": {
@@ -144,10 +144,10 @@ const alphabet = {
     "snakeX": 41.3,
     "snakeY": 210,
     "snakeLength": 2,
-    "snakeRot": 320.4,
-    "rect1Rot": 172.8,
-    "rect2Rot": 172.8,
-    "triangleRot": 86.4
+    "snakeRot": 0,
+    "rect1Rot": 180,
+    "rect2Rot": 180,
+    "triangleRot": 270
   },
   "J": {
     "triangleX": 36,
@@ -159,10 +159,10 @@ const alphabet = {
     "snakeX": 18.3,
     "snakeY": 24,
     "snakeLength": 4,
-    "snakeRot": 320.4,
-    "rect1Rot": 172.8,
-    "rect2Rot": 172.8,
-    "triangleRot": 144
+    "snakeRot": 0,
+    "rect1Rot": 180,
+    "rect2Rot": 180,
+    "triangleRot": 90
   },
   "K": {
     "triangleX": 48,
@@ -174,10 +174,10 @@ const alphabet = {
     "snakeX": 64.3,
     "snakeY": 30,
     "snakeLength": 6,
-    "snakeRot": 90,
-    "rect1Rot": 172.8,
+    "snakeRot": 117,
+    "rect1Rot": 180,
     "rect2Rot": 169.2,
-    "triangleRot": 28.8
+    "triangleRot": 90
   },
   "L": {
     "triangleX": 70,
@@ -189,28 +189,28 @@ const alphabet = {
     "snakeX": 80.4,
     "snakeY": 176,
     "snakeLength": 3,
-    "snakeRot": 172.8,
-    "rect1Rot": 172.8,
-    "rect2Rot": 172.8,
-    "triangleRot": 201.6
+    "snakeRot": 180,
+    "rect1Rot": 180,
+    "rect2Rot": 180,
+    "triangleRot": 270
   },
   "M": {
     "triangleX": 54,
     "triangleY": 68,
     "rect1X": 14,
-    "rect1Y": 144,
+    "rect1Y": 150,
     "rect2X": 14,
     "rect2Y": 52,
     "snakeX": 80.4,
     "snakeY": 28,
     "snakeLength": 7,
-    "snakeRot": 259.2,
-    "rect1Rot": 172.8,
-    "rect2Rot": 172.8,
-    "triangleRot": 259.2
+    "snakeRot": 90,
+    "rect1Rot": 180,
+    "rect2Rot": 180,
+    "triangleRot": 90
   },
   "N": {
-    "triangleX": 72,
+    "triangleX": 75,
     "triangleY": 162,
     "rect1X": 86,
     "rect1Y": 50,
@@ -219,10 +219,10 @@ const alphabet = {
     "snakeX": 11.4,
     "snakeY": 22,
     "snakeLength": 8,
-    "snakeRot": 82.8,
-    "rect1Rot": 172.8,
-    "rect2Rot": 172.8,
-    "triangleRot": 201.6
+    "snakeRot": 65,
+    "rect1Rot": 180,
+    "rect2Rot": 180,
+    "triangleRot": 270
   },
   "O": {
     "triangleX": 50,
@@ -234,10 +234,10 @@ const alphabet = {
     "snakeX": 34.4,
     "snakeY": 160,
     "snakeLength": 0,
-    "snakeRot": 259.2,
-    "rect1Rot": 151.2,
-    "rect2Rot": 169.2,
-    "triangleRot": 144
+    "snakeRot": 90,
+    "rect1Rot": 205,
+    "rect2Rot": 155,
+    "triangleRot": 90
   },
   "P": {
     "triangleX": 58,
@@ -249,7 +249,7 @@ const alphabet = {
     "snakeX": 13.7,
     "snakeY": 26,
     "snakeLength": 7,
-    "snakeRot": 259.2,
+    "snakeRot": 90,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -264,10 +264,10 @@ const alphabet = {
     "snakeX": 88.2,
     "snakeY": 164,
     "snakeLength": 2,
-    "snakeRot": 180,
-    "rect1Rot": 151.2,
-    "rect2Rot": 169.2,
-    "triangleRot": 144
+    "snakeRot": 235,
+    "rect1Rot": 205,
+    "rect2Rot": 155,
+    "triangleRot": 90
   },
   "R": {
     "triangleX": 58,
@@ -279,7 +279,7 @@ const alphabet = {
     "snakeX": 91.9,
     "snakeY": 160,
     "snakeLength": 4,
-    "snakeRot": 180,
+    "snakeRot": 235,
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
@@ -294,9 +294,9 @@ const alphabet = {
     "snakeX": 39,
     "snakeY": 188,
     "snakeLength": 2,
-    "snakeRot": 244.8,
-    "rect1Rot": 190.8,
-    "rect2Rot": 7.2,
+    "snakeRot": 320,
+    "rect1Rot": 125,
+    "rect2Rot": 55,
     "triangleRot": 0
   },
   "T": {
@@ -309,10 +309,10 @@ const alphabet = {
     "snakeX": 20.1,
     "snakeY": 30,
     "snakeLength": 4,
-    "snakeRot": 320.4,
-    "rect1Rot": 172.8,
-    "rect2Rot": 172.8,
-    "triangleRot": 28.8
+    "snakeRot": 0,
+    "rect1Rot": 180,
+    "rect2Rot": 180,
+    "triangleRot": 90
   },
   "U": {
     "triangleX": 50,
@@ -324,10 +324,10 @@ const alphabet = {
     "snakeX": 105,
     "snakeY": 158,
     "snakeLength": 6,
-    "snakeRot": 86.4,
+    "snakeRot": 270,
     "rect1Rot": 0,
     "rect2Rot": 0,
-    "triangleRot": 144
+    "triangleRot": 90
   },
   "V": {
     "triangleX": 50,
@@ -339,25 +339,25 @@ const alphabet = {
     "snakeX": 34.4,
     "snakeY": 160,
     "snakeLength": 0,
-    "snakeRot": 259.2,
-    "rect1Rot": 244.8,
-    "rect2Rot": 100.8,
-    "triangleRot": 144
+    "snakeRot": 90,
+    "rect1Rot": 165,
+    "rect2Rot": 195,
+    "triangleRot": 90
   },
   "W": {
     "triangleX": 40,
     "triangleY": 130,
     "rect1X": 84,
-    "rect1Y": 144,
+    "rect1Y": 150,
     "rect2X": 84,
     "rect2Y": 52,
     "snakeX": 15,
     "snakeY": 168,
     "snakeLength": 7,
-    "snakeRot": 86.4,
+    "snakeRot": 270,
     "rect1Rot": 0,
     "rect2Rot": 0,
-    "triangleRot": 201.6
+    "triangleRot": 270
   },
   "X": {
     "triangleX": 50,
@@ -369,25 +369,25 @@ const alphabet = {
     "snakeX": 34.4,
     "snakeY": 114,
     "snakeLength": 0,
-    "snakeRot": 234,
-    "rect1Rot": 169.2,
-    "rect2Rot": 176.4,
-    "triangleRot": 28.8
+    "snakeRot": 90,
+    "rect1Rot": 155,
+    "rect2Rot": 205,
+    "triangleRot": 90
   },
   "Y": {
     "triangleX": 52,
     "triangleY": 42,
-    "rect1X": 50,
-    "rect1Y": 138,
+    "rect1X": 30,
+    "rect1Y": 50,
     "rect2X": 50,
     "rect2Y": 150,
-    "snakeX": 34.4,
-    "snakeY": 106,
-    "snakeLength": 0,
-    "snakeRot": 259.2,
-    "rect1Rot": 172.8,
-    "rect2Rot": 172.8,
-    "triangleRot": 28.8
+    "snakeX": 65,
+    "snakeY": 26,
+    "snakeLength": 3,
+    "snakeRot": 117,
+    "rect1Rot": 150,
+    "rect2Rot": 180,
+    "triangleRot": 90
   },
   "Z": {
     "triangleX": 42,
@@ -399,10 +399,10 @@ const alphabet = {
     "snakeX": 78.9,
     "snakeY": 176,
     "snakeLength": 3,
-    "snakeRot": 172.8,
-    "rect1Rot": 176.4,
-    "rect2Rot": 259.2,
-    "triangleRot": 86.4
+    "snakeRot": 180,
+    "rect1Rot": 205,
+    "rect2Rot": 90,
+    "triangleRot": 270
   },
   "0": {
     "triangleX": 50,
@@ -414,10 +414,10 @@ const alphabet = {
     "snakeX": 34.4,
     "snakeY": 110,
     "snakeLength": 0,
-    "snakeRot": 259.2,
-    "rect1Rot": 151.2,
-    "rect2Rot": 169.2,
-    "triangleRot": 144
+    "snakeRot": 90,
+    "rect1Rot": 205,
+    "rect2Rot": 155,
+    "triangleRot": 90
   },
   "1": {
     "triangleX": 40,
@@ -432,7 +432,7 @@ const alphabet = {
     "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
-    "triangleRot": 57.6
+    "triangleRot": 180
   },
   "2": {
     "triangleX": 42,
@@ -444,10 +444,10 @@ const alphabet = {
     "snakeX": 68.9,
     "snakeY": 166,
     "snakeLength": 3,
-    "snakeRot": 172.8,
+    "snakeRot": 180,
     "rect1Rot": 0,
-    "rect2Rot": 259.2,
-    "triangleRot": 57.6
+    "rect2Rot": 90,
+    "triangleRot": 180
   },
   "3": {
     "triangleX": 56,
@@ -459,10 +459,10 @@ const alphabet = {
     "snakeX": 70,
     "snakeY": 40,
     "snakeLength": 6,
-    "snakeRot": 234,
-    "rect1Rot": 86.39999999,
-    "rect2Rot": 259.2,
-    "triangleRot": 57.6
+    "snakeRot": 90,
+    "rect1Rot": 90,
+    "rect2Rot": 90,
+    "triangleRot": 180
   },
   "4": {
     "triangleX": 42,
@@ -475,9 +475,9 @@ const alphabet = {
     "snakeY": 106,
     "snakeLength": 3,
     "snakeRot": 0,
-    "rect1Rot": 234,
+    "rect1Rot": 90,
     "rect2Rot": 0,
-    "triangleRot": 212.4
+    "triangleRot": 169
   },
   "5": {
     "triangleX": 58,
@@ -491,7 +491,7 @@ const alphabet = {
     "snakeLength": 3,
     "snakeRot": 0,
     "rect1Rot": 0,
-    "rect2Rot": 234,
+    "rect2Rot": 90,
     "triangleRot": 0
   },
   "6": {
@@ -504,10 +504,10 @@ const alphabet = {
     "snakeX": 108,
     "snakeY": 52,
     "snakeLength": 2,
-    "snakeRot": 61.2,
-    "rect1Rot": 234,
+    "snakeRot": 260,
+    "rect1Rot": 90,
     "rect2Rot": 0,
-    "triangleRot": 3.6
+    "triangleRot": 85
   },
   "7": {
     "triangleX": 42,
@@ -520,9 +520,9 @@ const alphabet = {
     "snakeY": 100,
     "snakeLength": 3,
     "snakeRot": 0,
-    "rect1Rot": 176.4,
-    "rect2Rot": 259.2,
-    "triangleRot": 86.4
+    "rect1Rot": 205,
+    "rect2Rot": 90,
+    "triangleRot": 270
   },
   "8": {
     "triangleX": 50,
@@ -535,9 +535,9 @@ const alphabet = {
     "snakeY": 200,
     "snakeLength": 2,
     "snakeRot": 0,
-    "rect1Rot": 169.2,
-    "rect2Rot": 176.4,
-    "triangleRot": 28.8
+    "rect1Rot": 155,
+    "rect2Rot": 205,
+    "triangleRot": 90
   },
   "9": {
     "triangleX": 38,
@@ -549,25 +549,9 @@ const alphabet = {
     "snakeX": 83.7,
     "snakeY": 26,
     "snakeLength": 7,
-    "snakeRot": 259.2,
+    "snakeRot": 90,
     "rect1Rot": 0,
     "rect2Rot": 0,
-    "triangleRot": 57.6
+    "triangleRot": 180
   },
-  "?": {
-    "triangleX": 70,
-    "triangleY": 44,
-    "rect1X": 38,
-    "rect1Y": 34,
-    "rect2X": 52,
-    "rect2Y": 120,
-    "snakeX": 43.6,
-    "snakeY": 162,
-    "snakeLength": 0,
-    "snakeRot": 180,
-    "rect1Rot": 7.2,
-    "rect2Rot": 176.4,
-    "triangleRot": 32.4
-  }
-
 }
