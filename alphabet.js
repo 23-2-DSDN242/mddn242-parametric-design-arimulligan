@@ -21,6 +21,11 @@ const canvasHeight = 500;
 // Handy string of all letters available
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?";
 
+// for the background
+const BASE_R = 242;
+const BASE_G = 211;
+const BASE_B = 153;
+
 let debugBox = false;
 
 function setup () {
@@ -41,6 +46,7 @@ function mouseClicked() {
 function draw () {
   // clear screen
   background(systemBackgroundColor);
+  textured(30000);
 
   // compute the center of the canvas
   let center_x = canvasWidth / 2;  
@@ -104,5 +110,39 @@ function keyTyped() {
   }
   else if (key == '@') {
     saveBlocksImages(true);
+  }
+}
+
+/**
+ * Function which makes background look textured and like an old piece of paper.
+ * @param density how old do you want the paper to look? AKA how many lines there are.
+ * @author inspired from Jonathan Freeman
+ * @link https://github.com/freethejazz/generative-watercolor/blob/develop/src/scripts/index.js
+ */
+function textured(density){
+  for(let i = 0; i < density; i++) {
+    stroke(
+      BASE_R - Math.random() * 15,
+      BASE_G - Math.random() * 15,
+      BASE_B - Math.random() * 15
+    );
+
+    let x1 = Math.random() * canvasWidth;
+    let y1 = Math.random() * canvasHeight;
+    let theta = Math.random() * 2 * Math.PI;
+    let segmentLength = Math.random() * 5 + 2;
+    let x2 = Math.cos(theta) * segmentLength + x1;
+    let y2 = Math.sin(theta) * segmentLength + y1;
+
+    // make the edges darker for a 'worn out' vibe
+    if (x1 < 20 || x1 > (canvasWidth - 20) || y1 < 20 || y1 > (canvasHeight - 20)){
+      stroke(
+        BASE_R - Math.random() * 35,
+        BASE_G - Math.random() * 35,
+        BASE_B - Math.random() * 35
+      )
+    }
+
+    line(x1, y1, x2, y2);
   }
 }

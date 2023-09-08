@@ -21,7 +21,7 @@ const colorList = [hay, redish, darkBrown];
  */
 function drawLetter(letterData) {
   // color/stroke setup
-  angleMode(RADIANS); // this is the problem rip
+  angleMode(RADIANS);
   noStroke();
 
   // determine parameters for the letter

@@ -31,6 +31,11 @@ if (typeof systemBackgroundColor === 'undefined') {
 // this will use variables if they are already defined
 // var systemBackgroundColor = systemBackgroundColor || "#e3eded";
 
+// for the background texture
+const BASE_R = 242;
+const BASE_G = 211;
+const BASE_B = 153;
+
 // if everything is defined above, this should just work
 function sliderToDataObject() {
   let obj = {};
@@ -83,6 +88,7 @@ function buttonPressedEvent() {
 function draw () {
   // clear screen
   background(systemBackgroundColor);
+  textured(30000);
 
   // compute the center of the canvas
   let center_x = canvasWidth / 2;
@@ -121,5 +127,39 @@ function keyTyped() {
     let obj = sliderToDataObject();
     json = JSON.stringify(obj, null, 2);
     console.log(json);
+  }
+}
+
+/**
+ * Function which makes background look textured and like an old piece of paper.
+ * @param density how old do you want the paper to look? AKA how many lines there are.
+ * @author inspired from Jonathan Freeman
+ * @link https://github.com/freethejazz/generative-watercolor/blob/develop/src/scripts/index.js
+ */
+function textured(density){
+  for(let i = 0; i < density; i++) {
+    stroke(
+      BASE_R - Math.random() * 15,
+      BASE_G - Math.random() * 15,
+      BASE_B - Math.random() * 15
+    );
+
+    let x1 = Math.random() * canvasWidth;
+    let y1 = Math.random() * canvasHeight;
+    let theta = Math.random() * 2 * Math.PI;
+    let segmentLength = Math.random() * 5 + 2;
+    let x2 = Math.cos(theta) * segmentLength + x1;
+    let y2 = Math.sin(theta) * segmentLength + y1;
+
+    // make the edges darker for a 'worn out' vibe
+    if (x1 < 20 || x1 > (canvasWidth - 20) || y1 < 20 || y1 > (canvasHeight - 20)){
+      stroke(
+        BASE_R - Math.random() * 35,
+        BASE_G - Math.random() * 35,
+        BASE_B - Math.random() * 35
+      )
+    }
+
+    line(x1, y1, x2, y2);
   }
 }
