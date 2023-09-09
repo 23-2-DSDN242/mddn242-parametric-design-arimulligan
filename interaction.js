@@ -30,6 +30,7 @@ let soloPrevObj = alphabet["default"];
 let soloIsAnimating = false;
 let soloNumAnimationFrames = 30;
 let soloCurAnimationFrame = 0;
+let backgroundPic;
 
 let debugBox = false;
 
@@ -40,6 +41,10 @@ function setup () {
   // create the drawing canvas, save the canvas element
   main_canvas = createCanvas(canvasWidth, canvasHeight);
   main_canvas.parent('canvasContainer');
+
+  // make textured paper background 
+  backgroundPic = createGraphics(canvasWidth, canvasHeight);
+  textured(30000); // now only runs once
 
   // with no animation, redrawing the screen is not necessary
   // noLoop();
@@ -103,7 +108,7 @@ let hot_key_press = false;
 function draw () {
   // clear screen
   background(systemBackgroundColor);
-  textured(30000);
+  image(backgroundPic, 0, 0); // loading coded picture so not lagging
 
   // draw the interpolation on the guidelines
   push();
@@ -213,7 +218,7 @@ function keyTyped() {
  */
 function textured(density){
   for(let i = 0; i < density; i++) {
-    stroke(
+    backgroundPic.stroke(
       BASE_R - Math.random() * 15,
       BASE_G - Math.random() * 15,
       BASE_B - Math.random() * 15
@@ -228,13 +233,13 @@ function textured(density){
 
     // make the edges darker for a 'worn out' vibe
     if (x1 < 20 || x1 > (canvasWidth - 20) || y1 < 20 || y1 > (canvasHeight - 20)){
-      stroke(
+      backgroundPic.stroke(
         BASE_R - Math.random() * 35,
         BASE_G - Math.random() * 35,
         BASE_B - Math.random() * 35
       )
     }
 
-    line(x1, y1, x2, y2);
+    backgroundPic.line(x1, y1, x2, y2);
   }
 }

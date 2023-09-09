@@ -22,6 +22,7 @@ let soloPrevObj = alphabet["default"];
 let soloIsAnimating = false;
 let soloNumAnimationFrames = 30;
 let soloCurAnimationFrame = 0;
+let backgroundPic; // for globalness
 
 // Handy string of all letters available
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?";
@@ -100,6 +101,9 @@ function setup () {
   // create the drawing canvas, save the canvas element
   main_canvas = createCanvas(canvasWidth, canvasHeight);
   main_canvas.parent('canvasContainer');
+
+  backgroundPic = createGraphics(canvasWidth, canvasHeight);
+  textured(30000); // now only runs once
 
   let now = millis();
   lastKeyPressedTime = now;
@@ -218,7 +222,7 @@ function draw () {
   }
 
   background(systemBackgroundColor);
-  textured(30000);
+  image(backgroundPic, 0, 0); // loading coded picture so not lagging
 
   // shorthand variables to allow margin
   var o = 20
@@ -271,7 +275,7 @@ function keyTyped() {
  */
 function textured(density){
   for(let i = 0; i < density; i++) {
-    stroke(
+    backgroundPic.stroke(
       BASE_R - Math.random() * 15,
       BASE_G - Math.random() * 15,
       BASE_B - Math.random() * 15
@@ -286,13 +290,13 @@ function textured(density){
 
     // make the edges darker for a 'worn out' vibe
     if (x1 < 20 || x1 > (canvasWidth - 20) || y1 < 20 || y1 > (canvasHeight - 20)){
-      stroke(
+      backgroundPic.stroke(
         BASE_R - Math.random() * 35,
         BASE_G - Math.random() * 35,
         BASE_B - Math.random() * 35
       )
     }
 
-    line(x1, y1, x2, y2);
+    backgroundPic.line(x1, y1, x2, y2);
   }
 }

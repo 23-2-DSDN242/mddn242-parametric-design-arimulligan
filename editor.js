@@ -57,10 +57,15 @@ const canvasHeight = 500;
 
 let debugBox = false;
 
+let backgroundPic;
+
 function setup () {
   // create the drawing canvas, save the canvas element
   main_canvas = createCanvas(canvasWidth, canvasHeight);
   main_canvas.parent('canvasContainer');
+
+  backgroundPic = createGraphics(canvasWidth, canvasHeight);
+  textured(30000); // now only runs once
 
   // rotation in degrees (more slider friendly)
   angleMode(DEGREES);
@@ -88,7 +93,7 @@ function buttonPressedEvent() {
 function draw () {
   // clear screen
   background(systemBackgroundColor);
-  textured(30000);
+  image(backgroundPic, 0, 0);
 
   // compute the center of the canvas
   let center_x = canvasWidth / 2;
@@ -138,7 +143,7 @@ function keyTyped() {
  */
 function textured(density){
   for(let i = 0; i < density; i++) {
-    stroke(
+    backgroundPic.stroke(
       BASE_R - Math.random() * 15,
       BASE_G - Math.random() * 15,
       BASE_B - Math.random() * 15
@@ -153,13 +158,13 @@ function textured(density){
 
     // make the edges darker for a 'worn out' vibe
     if (x1 < 20 || x1 > (canvasWidth - 20) || y1 < 20 || y1 > (canvasHeight - 20)){
-      stroke(
+      backgroundPic.stroke(
         BASE_R - Math.random() * 35,
         BASE_G - Math.random() * 35,
         BASE_B - Math.random() * 35
       )
     }
 
-    line(x1, y1, x2, y2);
+    backgroundPic.line(x1, y1, x2, y2);
   }
 }
