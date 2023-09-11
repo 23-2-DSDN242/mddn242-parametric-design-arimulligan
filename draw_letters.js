@@ -143,7 +143,7 @@ function polygon(x, y, sizeX, sizeY, sides = 3, radius = 0, rot=0) {
  * @param startY y-coord
  * @author Arianna Mulligan
  */
-function drawSnake(numArcs, startX, startY, rotation, difference=0) {
+function drawSnake(numArcs, startX, startY, rotation) {
   let segmentSize = 20; // Size of each segment
   let spacing = 5; // Spacing between arcs
   push();
@@ -160,16 +160,16 @@ function drawSnake(numArcs, startX, startY, rotation, difference=0) {
     let startAngle, endAngle, y;
     if (i % 2 === 0) {
       y = 0;
-      startAngle = -QUARTER_PI + difference; // Start from the opposite direction
-      endAngle = -PI + 0.99 + difference; // Go to the opposite direction
+      startAngle = -QUARTER_PI;
+      endAngle = -PI + 0.99;
     } else {
       y = -(segmentSize + spacing) - 6;
-      startAngle = QUARTER_PI + difference; // Start from the opposite direction
-      endAngle = PI - 0.99 + difference; // Go to the opposite direction
+      startAngle = QUARTER_PI;
+      endAngle = PI - 0.99;
     }
 
     // Calculate the number of points to draw along the arc
-    let numPoints = numArcs * 2; // You can adjust this for smoother or coarser curves
+    let numPoints = numArcs * 2;
 
     // Calculate and draw points along the arc
     for (let j = 0; j <= numPoints; j++) {
