@@ -67,7 +67,7 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["snakeX"] = map(percent, 0, 100, oldObj["snakeX"], newObj["snakeX"]);
   new_letter["snakeY"] = map(percent, 0, 100, oldObj["snakeY"], newObj["snakeY"]);
 
-  new_letter["snakeLength"] = map(percent, 0, 100, oldObj["snakeLength"], newObj["snakeLength"]);
+  new_letter["snakeLength"] = map(percent, 0, 200, oldObj["snakeLength"], newObj["snakeLength"]);
 
   new_letter["snakeRot"] = map(percent, 0, 100, oldObj["snakeRot"], newObj["snakeRot"]);
 
@@ -143,7 +143,7 @@ function polygon(x, y, sizeX, sizeY, sides = 3, radius = 0, rot=0) {
  * @param startY y-coord
  * @author Arianna Mulligan
  */
-function drawSnake(numArcs, startX, startY, rotation) {
+function drawSnake(numArcs, startX, startY, rotation, difference=0) {
   let segmentSize = 20; // Size of each segment
   let spacing = 5; // Spacing between arcs
   push();
@@ -152,24 +152,36 @@ function drawSnake(numArcs, startX, startY, rotation) {
   noFill();
   stroke(brown);
   strokeWeight(5);
+
   for (let i = 0; i < numArcs; i++) {
-    let x =  (i * (segmentSize + spacing));
+    let x = i * (segmentSize + spacing);
 
     // Determine the arc angles based on whether i is even or odd
     let startAngle, endAngle, y;
     if (i % 2 === 0) {
       y = 0;
-      startAngle = PI + QUARTER_PI;
-      endAngle = -QUARTER_PI;
+      startAngle = -QUARTER_PI + difference; // Start from the opposite direction
+      endAngle = -PI + 0.99 + difference; // Go to the opposite direction
     } else {
-      y = -(segmentSize + spacing + 6);
-      startAngle = QUARTER_PI;
-      endAngle = -PI - QUARTER_PI;
+      y = -(segmentSize + spacing) - 6;
+      startAngle = QUARTER_PI + difference; // Start from the opposite direction
+      endAngle = PI - 0.99 + difference; // Go to the opposite direction
     }
-    
+
+    // Calculate the number of points to draw along the arc
+    let numPoints = numArcs * 2; // You can adjust this for smoother or coarser curves
+
+    // Calculate and draw points along the arc
+    for (let j = 0; j <= numPoints; j++) {
+      let angle = map(j, 0, numPoints, startAngle, endAngle);
+      let px = x + cos(angle) * segmentSize;
+      let py = y + sin(angle) * segmentSize;
+      point(px, py);
+    }
     // Draw the arc to create a curved appearance
-    arc(x, y, segmentSize * 2, segmentSize * 2, startAngle, endAngle);
+    //arc(x, y, segmentSize * 2, segmentSize * 2, startAngle, endAngle);
   }
+
   // head
   let xhead = - segmentSize +5;
   let yhead = - segmentSize +4;
