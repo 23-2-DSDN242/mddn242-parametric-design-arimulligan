@@ -39,6 +39,8 @@ function drawLetter(letterData) {
   let rect2Rot = letterData["rect2Rot"];
   let triangleRot = letterData["triangleRot"];
 
+  let snakeAngle = letterData["snakeAngle"];
+
   for (let i = 0; i < 3; i++){
     // change each color
     fill(colorList[i]);
@@ -66,7 +68,6 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["rect2Y"] = map(percent, 0, 100, oldObj["rect2Y"], newObj["rect2Y"]);
   new_letter["snakeX"] = map(percent, 0, 100, oldObj["snakeX"], newObj["snakeX"]);
   new_letter["snakeY"] = map(percent, 0, 100, oldObj["snakeY"], newObj["snakeY"]);
-
   new_letter["snakeLength"] = map(percent, 0, 200, oldObj["snakeLength"], newObj["snakeLength"]);
 
   new_letter["snakeRot"] = map(percent, 0, 100, oldObj["snakeRot"], newObj["snakeRot"]);
@@ -74,13 +75,14 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["rect1Rot"] = map(percent, 0, 100, oldObj["rect1Rot"], newObj["rect1Rot"]);
   new_letter["rect2Rot"] = map(percent, 0, 100, oldObj["rect2Rot"], newObj["rect2Rot"]);
   new_letter["triangleRot"] = map(percent, 0, 100, oldObj["triangleRot"], newObj["triangleRot"]);
+
   return new_letter;
 }
 
 var swapWords = [
-  "ABBAABBA",
-  "CAB?CAB?",
-  "BAAAAAAA"
+  "EGYPTIZE",
+  "MOSESBOA",
+  "CLEOSASP"
 ]
 
 /** A primitive function for rounded polygonal shape
@@ -178,8 +180,6 @@ function drawSnake(numArcs, startX, startY, rotation) {
       let py = y + sin(angle) * segmentSize;
       point(px, py);
     }
-    // Draw the arc to create a curved appearance
-    //arc(x, y, segmentSize * 2, segmentSize * 2, startAngle, endAngle);
   }
 
   // head

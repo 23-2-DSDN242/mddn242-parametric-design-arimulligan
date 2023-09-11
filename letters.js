@@ -12,7 +12,8 @@ const alphabet = {
     "snakeRot": 235,
     "rect1Rot": 230,
     "rect2Rot": 205,
-    "triangleRot": 170
+    "triangleRot": 170,
+    "snakeAngle": 0
   },
   "A": {
     "triangleX": 52,
@@ -27,7 +28,8 @@ const alphabet = {
     "snakeRot": 0,
     "rect1Rot": 200,
     "rect2Rot": 160,
-    "triangleRot": 270
+    "triangleRot": 270,
+    "snakeAngle": 0
   },
   "B": {
     "triangleX": 42,
@@ -43,6 +45,7 @@ const alphabet = {
     "rect1Rot": 0,
     "rect2Rot": 230,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "C": {
     "triangleX": 40,
@@ -57,7 +60,8 @@ const alphabet = {
     "snakeRot": 40,
     "rect1Rot": 55,
     "rect2Rot": 125,
-    "triangleRot": 180
+    "triangleRot": 180,
+    "snakeAngle": 0
   },
   "D": {
     "triangleX": 66,
@@ -73,6 +77,7 @@ const alphabet = {
     "rect1Rot": 130,
     "rect2Rot": 230,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "E": {
     "triangleX": 36,
@@ -88,6 +93,7 @@ const alphabet = {
     "rect1Rot": 90,
     "rect2Rot": 90,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "F": {
     "triangleX": 36,
@@ -103,6 +109,7 @@ const alphabet = {
     "rect1Rot": 90,
     "rect2Rot": 0,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "G": {
     "triangleX": 78,
@@ -118,6 +125,7 @@ const alphabet = {
     "rect1Rot": 145,
     "rect2Rot": 215,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "H": {
     "triangleX": 50,
@@ -133,6 +141,7 @@ const alphabet = {
     "rect1Rot": 180,
     "rect2Rot": 180,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "I": {
     "triangleX": 52,
@@ -147,7 +156,8 @@ const alphabet = {
     "snakeRot": 0,
     "rect1Rot": 180,
     "rect2Rot": 180,
-    "triangleRot": 270
+    "triangleRot": 270,
+    "snakeAngle": 0
   },
   "J": {
     "triangleX": 36,
@@ -163,6 +173,7 @@ const alphabet = {
     "rect1Rot": 180,
     "rect2Rot": 180,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "K": {
     "triangleX": 48,
@@ -178,6 +189,7 @@ const alphabet = {
     "rect1Rot": 180,
     "rect2Rot": 169.2,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "L": {
     "triangleX": 70,
@@ -192,7 +204,8 @@ const alphabet = {
     "snakeRot": 180,
     "rect1Rot": 180,
     "rect2Rot": 180,
-    "triangleRot": 270
+    "triangleRot": 270,
+    "snakeAngle": 0
   },
   "M": {
     "triangleX": 54,
@@ -208,6 +221,7 @@ const alphabet = {
     "rect1Rot": 180,
     "rect2Rot": 180,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "N": {
     "triangleX": 75,
@@ -222,7 +236,8 @@ const alphabet = {
     "snakeRot": 65,
     "rect1Rot": 180,
     "rect2Rot": 180,
-    "triangleRot": 270
+    "triangleRot": 270,
+    "snakeAngle": 0
   },
   "O": {
     "triangleX": 50,
@@ -238,6 +253,7 @@ const alphabet = {
     "rect1Rot": 205,
     "rect2Rot": 155,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "P": {
     "triangleX": 58,
@@ -253,6 +269,7 @@ const alphabet = {
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "Q": {
     "triangleX": 50,
@@ -268,6 +285,7 @@ const alphabet = {
     "rect1Rot": 205,
     "rect2Rot": 155,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "R": {
     "triangleX": 58,
@@ -283,6 +301,7 @@ const alphabet = {
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "S": {
     "triangleX": 58,
@@ -298,6 +317,7 @@ const alphabet = {
     "rect1Rot": 125,
     "rect2Rot": 55,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "T": {
     "triangleX": 52,
@@ -313,6 +333,7 @@ const alphabet = {
     "rect1Rot": 180,
     "rect2Rot": 180,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "U": {
     "triangleX": 50,
@@ -328,6 +349,7 @@ const alphabet = {
     "rect1Rot": 0,
     "rect2Rot": 0,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "V": {
     "triangleX": 50,
@@ -343,6 +365,7 @@ const alphabet = {
     "rect1Rot": 165,
     "rect2Rot": 195,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "W": {
     "triangleX": 40,
@@ -357,7 +380,8 @@ const alphabet = {
     "snakeRot": 270,
     "rect1Rot": 0,
     "rect2Rot": 0,
-    "triangleRot": 270
+    "triangleRot": 270,
+    "snakeAngle": 0
   },
   "X": {
     "triangleX": 50,
@@ -373,6 +397,7 @@ const alphabet = {
     "rect1Rot": 155,
     "rect2Rot": 205,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "Y": {
     "triangleX": 52,
@@ -388,6 +413,7 @@ const alphabet = {
     "rect1Rot": 150,
     "rect2Rot": 180,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "Z": {
     "triangleX": 42,
@@ -402,7 +428,8 @@ const alphabet = {
     "snakeRot": 180,
     "rect1Rot": 205,
     "rect2Rot": 90,
-    "triangleRot": 270
+    "triangleRot": 270,
+    "snakeAngle": 0
   },
   "0": {
     "triangleX": 50,
@@ -418,6 +445,7 @@ const alphabet = {
     "rect1Rot": 205,
     "rect2Rot": 155,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "1": {
     "triangleX": 40,
@@ -432,7 +460,8 @@ const alphabet = {
     "snakeRot": 0,
     "rect1Rot": 0,
     "rect2Rot": 0,
-    "triangleRot": 180
+    "triangleRot": 180,
+    "snakeAngle": 0
   },
   "2": {
     "triangleX": 42,
@@ -447,7 +476,8 @@ const alphabet = {
     "snakeRot": 180,
     "rect1Rot": 0,
     "rect2Rot": 90,
-    "triangleRot": 180
+    "triangleRot": 180,
+    "snakeAngle": 0
   },
   "3": {
     "triangleX": 56,
@@ -462,7 +492,8 @@ const alphabet = {
     "snakeRot": 90,
     "rect1Rot": 90,
     "rect2Rot": 90,
-    "triangleRot": 180
+    "triangleRot": 180,
+    "snakeAngle": 0
   },
   "4": {
     "triangleX": 42,
@@ -477,7 +508,8 @@ const alphabet = {
     "snakeRot": 0,
     "rect1Rot": 90,
     "rect2Rot": 0,
-    "triangleRot": 169
+    "triangleRot": 169,
+    "snakeAngle": 0
   },
   "5": {
     "triangleX": 58,
@@ -493,6 +525,7 @@ const alphabet = {
     "rect1Rot": 0,
     "rect2Rot": 90,
     "triangleRot": 0
+ ,   "snakeAngle": 0
   },
   "6": {
     "triangleX": 54,
@@ -508,6 +541,7 @@ const alphabet = {
     "rect1Rot": 90,
     "rect2Rot": 0,
     "triangleRot": 85
+,    "snakeAngle": 0
   },
   "7": {
     "triangleX": 42,
@@ -522,7 +556,8 @@ const alphabet = {
     "snakeRot": 0,
     "rect1Rot": 205,
     "rect2Rot": 90,
-    "triangleRot": 270
+    "triangleRot": 270,
+    "snakeAngle": 0
   },
   "8": {
     "triangleX": 50,
@@ -538,6 +573,7 @@ const alphabet = {
     "rect1Rot": 155,
     "rect2Rot": 205,
     "triangleRot": 90
+,    "snakeAngle": 0
   },
   "9": {
     "triangleX": 38,
@@ -552,6 +588,7 @@ const alphabet = {
     "snakeRot": 90,
     "rect1Rot": 0,
     "rect2Rot": 0,
-    "triangleRot": 180
+    "triangleRot": 180,
+    "snakeAngle": 0
   },
 }
