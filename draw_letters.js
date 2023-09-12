@@ -94,8 +94,8 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["snakeLength"] = map(percent, 0, maxLen, oldObj["snakeLength"], newObj["snakeLength"]);
 
   // snake wiggles rotatingly
-  let amplitude = 30;
-  let freq = 0.20;
+  let amplitude = 20;
+  let freq = 0.10;
   if(percent < 50) {
     amplitude = map(percent, 0, 50, 0, amplitude);
   }
@@ -115,7 +115,7 @@ function interpolate_letter(percent, oldObj, newObj) {
 var swapWords = [
   "EGYPTIZE",
   "MOSESBOA",
-  "CLEOSASP"
+  "CLEOPATR"
 ]
 
 /** A primitive function for rounded polygonal shape
@@ -172,8 +172,8 @@ function polygon(x, y, sizeX, sizeY, sides = 3, radius = 0, rot=0) {
 }
 
 /**
- * Draws a snake using arc.
- * @param numArcs Number of arcs / or length of snake
+ * Draws a snake using points with arc related shape.
+ * @param numArcs Number of arc points / or length of snake
  * @param startX  x-coord
  * @param startY y-coord
  * @author Arianna Mulligan
