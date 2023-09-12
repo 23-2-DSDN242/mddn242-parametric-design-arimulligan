@@ -39,8 +39,6 @@ function drawLetter(letterData) {
   let rect2Rot = letterData["rect2Rot"];
   let triangleRot = letterData["triangleRot"];
 
-  let snakeAngle = letterData["snakeAngle"];
-
   for (let i = 0; i < 3; i++){
     // change each color
     fill(colorList[i]);
@@ -58,6 +56,13 @@ function drawLetter(letterData) {
   drawSnake(snakeLength, snakeX, snakeY, snakeRot);
 }
 
+/**
+ * Making letters animate into different letters.
+ * @param percent number 0 - 100
+ * @param oldObj old letter
+ * @param newObj new letter
+ * @returns new letter object
+ */
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
   new_letter["triangleX"] = map(percent, 0, 100, oldObj["triangleX"], newObj["triangleX"]);
@@ -66,11 +71,39 @@ function interpolate_letter(percent, oldObj, newObj) {
   new_letter["rect1Y"] = map(percent, 0, 100, oldObj["rect1Y"], newObj["rect1Y"]);
   new_letter["rect2X"] = map(percent, 0, 100, oldObj["rect2X"], newObj["rect2X"]);
   new_letter["rect2Y"] = map(percent, 0, 100, oldObj["rect2Y"], newObj["rect2Y"]);
-  new_letter["snakeX"] = map(percent, 0, 100, oldObj["snakeX"], newObj["snakeX"]);
-  new_letter["snakeY"] = map(percent, 0, 100, oldObj["snakeY"], newObj["snakeY"]);
-  new_letter["snakeLength"] = map(percent, 0, 200, oldObj["snakeLength"], newObj["snakeLength"]);
 
-  new_letter["snakeRot"] = map(percent, 0, 100, oldObj["snakeRot"], newObj["snakeRot"]);
+  // snake squiggles up and down
+  let amplitudeY = 10;
+  let freqY = 0.10;
+  if(percent > 50) {
+    amplitudeY = map(percent, 0, 50, 0, amplitudeY);
+  }
+  else {
+    amplitudeY = map(percent, 50, 100, amplitudeY, 0);
+  }
+  let move_offset = amplitudeY * Math.sin(freqY * percent);
+
+  new_letter["snakeY"] = move_offset + map(percent, 0, 100, oldObj["snakeY"], newObj["snakeY"]);
+  new_letter["snakeX"] = move_offset + map(percent, 0, 100, oldObj["snakeX"], newObj["snakeX"]);
+
+  // so the length doesn't glitch AS much
+  let maxLen = 300;
+  if (percent > 50){
+    maxLen = 100;
+  }
+  new_letter["snakeLength"] = map(percent, 0, maxLen, oldObj["snakeLength"], newObj["snakeLength"]);
+
+  // snake wiggles rotatingly
+  let amplitude = 30;
+  let freq = 0.20;
+  if(percent < 50) {
+    amplitude = map(percent, 0, 50, 0, amplitude);
+  }
+  else {
+    amplitude = map(percent, 50, 100, amplitude, 0);
+  }
+  let wiggle_offset = amplitude * Math.sin(freq * percent);
+  new_letter["snakeRot"] = wiggle_offset + map(percent, 0, 100, oldObj["snakeRot"], newObj["snakeRot"]);
 
   new_letter["rect1Rot"] = map(percent, 0, 100, oldObj["rect1Rot"], newObj["rect1Rot"]);
   new_letter["rect2Rot"] = map(percent, 0, 100, oldObj["rect2Rot"], newObj["rect2Rot"]);
