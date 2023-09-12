@@ -4,7 +4,7 @@
 
 *by Arianna Mulligan*
 
-Each of my letters is composed with one triangle-pyramid, two irregular quadrilaterals and one snake (either being
+Each of my letters are composed with a triangle-pyramid, two irregular quadrilaterals and a snake (either being
 just its head or its body and head). I also added an old paper-like feature to the background, to fully embrace the 'old egyptian' theme that I was going for. I used thousands of tiny lines with varying colours, so there was older looking edges. Then I created an image based on those lines (because I used random function, interpolation needed more efficiency, and image function is faster because the tiny lines in the loop would only be run once - less time complexity).
 
 I was inspired to make an egyptian font because I was reading about how Moses' staff turns into a snake in the Bible. Also how Cleopatra the Queen of Egypt supposedly died by putting her hand in a basket of asps. This is why I added a snake into the egyptian font. The snake has points instead of arcs drawn because the old carvings of the snake hieroglyphs would've eroded. This is why sometimes the snake isn't fully drawn, but sometimes it is. It also looks nicer with the interpolation. As the snake is the main theme of the font, I decided to focus on how to interpolate the snake, using its' coordinates and rotation to make it look like the snake is squiggling into its place. I didn't end up changing the snakes' actual angles and shape because I wanted to emphasise how the snake isn't actually alive - like how Moses' staff is a straight, unalive stick, which only turns into a snake in front of Pharaoh and his officials.
